@@ -1,0 +1,287 @@
+/*
+
+style1 : STYLE SHEET 1
+INCLUDES:
+- Body layout [ACROSS ALL PAGES]
+- Navigation bar [ACROSS ALL PAGES]
+- Footer [ACROSS ALL PAGES]
+- Homepage [index.html only]
+
+*/
+
+/* CSS HEX 
+--engineering-orange: #BB1B04ff;
+--dark-goldenrod: #B27D2Fff;
+--gunmetal: #19242Bff;
+*/
+
+/*ACROSS ALL PAGES*/
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #19242Bff;
+    color: #fff;
+    line-height: 1.2em;
+}
+
+.wrapper{
+    padding-top: 80px;
+}
+
+.navbar {
+    width: calc(100% + 20px); /* Set width to 100% minus 20px padding */
+    max-width: 1280px; /* Limit maximum width to body max-width */
+    height: 80px;
+    position: fixed; /* Set navbar position to fixed */
+    top: 0; /* Position it at the top of the viewport */
+    background-color: #19242Bff; /* Match background color of body */
+    z-index: 1000; /* Ensure navbar stays on top of other content */
+    padding: 0 10px; /* Add padding to match body padding */
+}
+
+.container {
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #BB1B04ff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 150%;
+    background-color: rgb(12, 48, 70);
+    border-radius: 1px;
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    z-index: -1;
+    transition: 0.05s;
+}
+
+nav ul li a:hover::after {
+    width: 120%;
+}
+
+/*END OF NAVBAR*/
+
+/*FOOTER*/
+.footer{
+    margin-top: 150px;
+    padding: 2%;
+    bottom: 0;
+    text-align: center;
+    font-size: small;
+    line-height: normal;
+    background-color: rgba(17, 25, 31, 0.66);
+}
+.footer .divider{ margin: 10px;}
+
+/* NAVBAR & FOOTER: Media query for smaller screens */
+@media (max-width: 795px) {
+    .navbar{height: 60px;}
+    .wrapper{ padding-top: 60px;}
+    .container { padding: 10px 2%; }
+    .logo { width: 40px; height: 40px; }
+    nav ul li { margin: 10px 5px; }
+    nav ul li a { font-size: 14px; }
+    .footer{font-size: 10px !important; line-height: normal;}
+}
+@media (max-width: 402px) {
+    .container { padding: 10px 2%; }
+    .logo { width: 5%; height: 5%; }
+    nav ul li { margin: 10px 5px; }
+    nav ul li a { font-size: 10px; }
+    .footer{font-size: 7px !important; line-height: normal;}
+}
+
+
+
+
+
+
+
+
+/*HOMEPAGE*/
+
+/*INTRO*/
+.img-fullwidth{ width: 100%; height: 350px;}
+#home-intro #intro-text{ text-align: center;}
+#intro-text h1{ margin-top: 2%; color: #B27D2Fff;}
+#intro-text p{ margin-top: 10px;}
+/*END OF INTRO*/
+
+/*SECTIONS*/
+.content{ padding-top: 100px;}
+.content p{ margin-top: 30px;}
+.section{
+    width: 100%;
+    height: 450px;
+    background-image: url(images/draft-img-content.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: inherit;
+}
+.see-more-btn{
+    margin-top:13px;
+    width:100px;
+    padding:8px;
+    background-color: transparent;
+    color:white;
+    border: solid 1px white;
+    border-radius: 2px;
+}
+
+#art-section{ margin-top: 150px;}
+#art-section .content{ padding-left: 100px;}
+
+#prog-section{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 150px;
+}
+#prog-section .content{ padding-right: 100px;}
+
+#game-section{
+    margin-top: 150px;
+    width: 100%;
+    height: 400px;
+}
+#game-section .content{ align-items: center; text-align: center;}
+
+/*END OF SECTIONS*/
+
+/* Media query for screens up to 795px */
+@media (max-width: 795px) {
+    .sections p{font-size: 80%; line-height: normal;}
+    .sections h3{font-size: 80%; line-height: normal;}
+    /* Intro section styles */
+    .img-fullwidth {margin-top: -60px;}
+    #intro-text h1 {margin-top: 0px; margin-bottom: 10px; position: inherit; }
+    #intro-text p {margin-top: 5px;}
+    /*sections*/
+    .content {
+        padding-top: 5%; /* Adjusted padding top */
+    }
+    .content p{margin-top: 1%;}
+    .section {
+        height: 250px; /* Adjusted height */
+    }
+    .see-more-btn {
+        padding: 2px 2px; /* Adjusted padding */
+        font-size: 80%; /* Adjusted font size */
+    }
+    #art-section .content {
+        padding-left: 12.5%; /* Adjusted padding left */
+    }
+    #prog-section {
+        margin-top: 25%; /* Adjusted margin top */
+    }
+    #prog-section .content {
+        padding-right: 12.5%; /* Adjusted padding right */
+    }
+    #game-section {
+        margin-top: 25%; /* Adjusted margin top */
+        height: 52%; /* Adjusted height */
+    }
+}
+
+@media (max-width: 640px) {
+    #main p{font-size: 65%; line-height: normal;}
+    #main h3{font-size: 65%; line-height: normal;}
+    /* Intro section styles */
+    .img-fullwidth {margin-top: -70px;}
+    #intro-text h1 {
+        margin-bottom: 10px;
+    }
+    .content {
+        padding-top: 10%; /* Adjusted padding top */
+    }
+}
+
+@media (max-width: 540px) {
+    #main p{font-size: 50%; line-height: normal;}
+    #main h3{font-size: 50%; line-height: normal;}
+    /* Intro section styles */
+    .img-fullwidth {margin-top: -101px;}
+    #intro-text h2 {
+        margin-top: -120px;
+        font-size: 100%; 
+    }
+    .section {
+        height: 300px; /* Adjusted height */
+    }
+    .see-more-btn {
+        padding: 2px 2px; /* Adjusted padding */
+        font-size: 55%; /* Adjusted font size */
+    }
+}
+
+@media (max-width: 440px) {
+    /* Intro section styles */
+    .img-fullwidth {margin-top: -100px;}
+    #intro-text h1 {
+        margin-top: -90px;
+        position: inherit;
+        font-size: 30px; 
+    }
+    .content {
+        padding-top: 20%; /* Adjusted padding top */
+    }
+    .section{
+        margin-top: 200px;
+    }
+}
+
+/* Media query for screens up to 402px */
+@media (max-width: 402px) {
+    #main p{font-size: 10px; line-height: normal;}
+    #main h3{font-size: 12px; line-height: normal;}
+    /* Intro section styles */
+    .img-fullwidth {margin-top: -100px;}
+    #intro-text h1 {
+        position: inherit;
+        margin-top: -95px;
+        font-size: 30px 
+    }
+    #intro-text p{
+        margin-top: 20px;
+        line-height: 1.4em;
+    }
+    .see-more-btn {
+        padding: 2px 2px; /* Adjusted padding */
+        font-size: 10px; /* Adjusted font size */
+    }
+}
+
+

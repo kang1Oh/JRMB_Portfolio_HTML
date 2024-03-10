@@ -1,0 +1,172 @@
+/*
+
+style3 : STYLE SHEET 3
+INCLUDES:
+- Portfolio [portfolio.html only]
+- Post-page [post-page.html only]
+- Media Queries of both pages
+
+*/
+
+/*PORTFOLIO*/
+.wrapper{
+    padding-top: 80px;
+}
+#portfolio .btn{
+    background-color: transparent;
+	margin: 10px 30px 10px 0px;
+	width:130px;
+	padding:5px;
+	color:white;
+    border: solid 1px white;
+    border-radius: 2px;
+}
+#folio-header{
+    background-color:  rgba(17, 25, 31, 0.66);
+    height: 130px;
+    padding: 35px 10%;
+}
+
+#folio-header h1{
+    font-size: 50px;
+    color: #B27D2Fff;
+}
+#tags{
+    margin-top: 20px;
+}
+#category-title{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    font-size: 40px;
+    color:  rgba(17, 25, 31, 0.66);
+}
+
+.post{
+    padding: 30px 200px;
+    margin: 100px 0px;
+    border: solid 1px white;
+    border-radius: 2px;
+    background-color: rgba(17, 25, 31, 0.66);
+}
+.post h2{
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.post img{
+    width: 100%;
+}
+/*END OF PORTFOLIO*/
+
+/*POST*/
+#post-image img{
+    width: 100%;
+}
+#post-info{
+    margin: 20px 10%;
+}
+#post-info #post-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#post-body{
+    margin: auto 30px;
+}
+#post-body p{
+    margin: 30px auto;
+}
+#post-attachments{
+    background-color: rgba(17, 25, 31, 0.66);
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 40px 20px;
+}
+#post-attachments ul li{
+    list-style: none;
+}
+#post-attachments ul li a{
+    color: white;
+    text-decoration: none;
+}
+/*END OF POST*/
+
+/*MEDIA QUERIES: PORTFOLIO AND ABOUT*/
+@media(max-width:768px){
+    #folio-header{ padding-top: 30px; margin-top: -20px;}
+    #folio-header h1{ font-size: 40px;}
+    #category-title{
+        font-size: 30px;
+        margin: 30px auto;
+    }
+    .post{
+        padding-left: 100px;
+        padding-right: 100px;
+        line-height: 1em;
+    }
+    .post h2{ font-size: 20px;}
+    .post p{ font-size: 11px;}
+    #portfolio .btn{
+        margin: 10px 17px 10px 0px;
+        width:100px;
+        padding:5px;
+        font-size: 11px;
+    }
+
+    #post-info h1{ font-size: 20px;}
+    #post-info h3{ font-size: 17px;}
+    #post-page p{ font-size: 11px;}
+    #post-attachments{ padding: 20px 10px;}
+    #post-attachments ul li a{ font-size: 11px;}
+
+}
+
+@media(max-width:450px){
+    #folio-header{ padding-top: 20px;}
+    #folio-header h1{ font-size: 30px;}
+    #category-title{
+        font-size: 30px;
+        margin: 20px auto;
+    }
+    .post{
+        padding-left: 30px;
+        padding-right: 30px;
+        line-height: 1em;
+    }
+    .post h2{ font-size: 20px; line-height: 1.2em;}
+    .post p{ font-size: 11px;}
+    #portfolio .btn{
+        margin: 10px 10px 10px 0px;
+        width:75px;
+        padding:5px;
+        font-size: 11px;
+    }
+
+    .wrapper{padding-top: 60px;}
+    #post-info #post-header{
+        display: block;
+    }
+    #post-info h3{ font-size: 15px;}
+    #post-body{
+        margin: auto;
+    }
+
+}
+
+@media(max-width:328px){
+    #category-title{
+        margin-top: 20px;
+        margin-bottom: -30px;
+    }
+    #portfolio .btn{
+        margin: 10px 5px 10px 0px;
+        width:70px;
+        padding:5px;
+        font-size: 10px;
+    }
+}
+
+

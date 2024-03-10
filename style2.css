@@ -1,0 +1,231 @@
+/*
+
+style2 : STYLE SHEET 2
+INCLUDES:
+- About [about.html and contact-me.html]
+- Contact [contact-me.html only]
+- Commissions [commission.html only]
+
+*/
+
+/*ABOUT*/
+.wrapper{ padding-top: 80px;}
+#about-main { display: flex; margin: 20px 5%;}
+
+.image-side{
+    flex: 1;
+    max-width: 100%; 
+    margin: 20px 0px;
+    padding-left: 80px;
+}
+
+.image-info { flex: 1; padding: 50px 30px 30px 0px; margin-left: -10px;}
+
+.image-info h1{ font-size: 50px; color: #B27D2Fff;}
+
+.image-info p{ padding-top: 30px;}
+
+
+@media (max-width: 1024px) {
+    #about-main{margin-top: -30px; line-height: 1.0em}
+    .image-side{padding-left: 60px;}
+    .image-side img{max-width: 85%; margin: 25px 0px;}
+    .image-info h1{ font-size: 30px; font-weight: lighter;}
+    .image-info p{ font-size: 12px; padding-top: 40px;}
+}
+
+@media (max-width: 768px) {
+    .wrapper{ padding-top: 6%;}
+    .image-side{padding-left: 10px;}
+    .image-info h1{font-size: 20px; font-weight: lighter;}
+    .image-info p{font-size: 11px; padding-top: 20px;}
+}
+
+@media (max-width: 500px) {
+    #about-main {
+        display: inline-block;
+        justify-items: center;
+        margin: 20px 5%;
+    }
+
+    .image-side img {
+        max-width: 100%;
+        align-content: center;
+        margin-top: -40px;
+    }
+
+    .image-info {
+        text-align: center;
+        padding: 0px 0px 50px 0px; 
+        margin-top: -30px;
+        margin-left: 0px; 
+    }
+    .image-info h1{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+}
+/*END OF ABOUT*/
+
+
+
+
+
+/*CONTACT*/
+
+#contact-main { display: flex; margin: 20px 5%;}
+
+#contact-input{ padding-top: 30px;}
+
+#contact-input #in{
+    margin-bottom: 20px;
+	border:5px solid white;
+	border-radius:5px;
+	width:80%;
+    padding: 5px;
+}
+
+#contact-input #btn {
+	background-color: transparent;
+	margin: 10px auto 20px 300px;
+	width:100px;
+	padding:8px;
+	color:white;
+    border: solid 1px white;
+    border-radius: 2px;
+}
+
+#socials-divider{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+#socials img{
+    height: 40px;
+    display: inline-block;
+    margin: 20px 20px;
+}
+
+
+@media(max-width:1024px){
+    #contact-main #btn{ margin-left: 230px;}
+    #socials img{
+        height: 30px;
+        display: inline-block;
+        margin: 10px 17px;
+    }
+}
+
+@media(max-width:768px){
+    #contact-main{ margin-top: -30px;}
+    #contact-input #in{ width: 100%; padding: 2px;}
+    #contact-input #btn{ margin-left: 220px;}
+    #socials-divider{ width: 100%;}
+    #socials img{
+        height: 30px;
+        display: inline-block;
+        margin: 10px 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    #contact-main {
+        display: inline-block;
+        justify-items: center;
+        margin: 20px 5%;
+    }
+    .image-side img {
+        max-width: 100%;
+        align-content: center;
+        margin-top: -40px;
+    }
+    .image-info h1{
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    #contact-input #btn{
+        margin-left: 0px;
+        align-content: center;
+        margin-bottom: 100px;
+    }
+}
+/*END OF CONTACT*/
+
+/*COMMISSIONS*/
+#comms-main{
+    margin: 20px auto;
+}
+#comms-header{
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+#comms-header h1{margin-bottom: 30px; color: #B27D2Fff;}
+#comms-deals{
+    display: flex;
+    justify-content: center;
+}
+.comms-box{
+    margin: 30px 50px;
+    padding: 30px 20px;
+    width: 200px;
+    border: solid 1px white;
+    border-radius: 3px;
+    background-color:  rgba(17, 25, 31, 0.66);
+    display: inline-block;
+    align-content: center;
+}
+.box-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comms-box h3{text-align: center; margin-top: 20px;}
+.comms-box .btn{
+    background-color: transparent;
+    align-content: center;
+	width:100px;
+	padding:8px;
+	color:white;
+    border: solid 1px white;
+    border-radius: 2px;
+    margin: 20%;
+}
+
+@media(max-width:876px){
+    .comms-box{
+        margin: 30px 10px;
+        padding: 30px 20px;
+    }
+    .comms-box .btn{
+        margin: 17%;
+    }
+}
+
+@media(max-width: 638px) {
+    #comms-main{ width: 100%;}
+    #comms-header{ 
+        margin: 20px auto;
+        display: inline-block;
+        text-align: center; 
+        font-size: 100%;
+    }
+    #comms-deals{
+        display: block;
+        text-align: center; 
+        padding: 0px;
+    }
+    .comms-box{
+        width: 70%;
+        padding: 30px 20px;
+        margin: 30px 10%; 
+        font-size: 75%;
+    }
+    .comms-box .btn {
+        margin: 20px auto; 
+    }
+}
+
+/*END OF COMMISSIONS*/
